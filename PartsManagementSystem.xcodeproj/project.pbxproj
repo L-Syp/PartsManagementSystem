@@ -80,12 +80,15 @@
 			isa = PBXGroup;
 			children = (
 				D6C4364220515651000C80E6 /* AppDelegate.swift */,
-				D6C4364420515651000C80E6 /* ViewController.swift */,
-				D6C4364620515651000C80E6 /* Main.storyboard */,
-				D6C4364C20515651000C80E6 /* Assets.xcassets */,
-				D6C4364E20515651000C80E6 /* LaunchScreen.storyboard */,
+				D6C4366A205156BD000C80E6 /* Storyboards */,
+				D6C4366720515670000C80E6 /* View */,
+				D6C4366620515665000C80E6 /* ViewControllers */,
+				D6C436652051565B000C80E6 /* Model */,
+				D6C4366820515686000C80E6 /* Extensions */,
+				D6C4366920515693000C80E6 /* Utils */,
+				D6C4366C205156FF000C80E6 /* CoreData */,
+				D6C4366B205156DA000C80E6 /* Assets */,
 				D6C4365120515651000C80E6 /* Info.plist */,
-				D6C4364920515651000C80E6 /* PartsManagementSystem.xcdatamodeld */,
 			);
 			path = PartsManagementSystem;
 			sourceTree = "<group>";
@@ -97,6 +100,67 @@
 				D6C4365C20515651000C80E6 /* Info.plist */,
 			);
 			path = PartsManagementSystemTests;
+			sourceTree = "<group>";
+		};
+		D6C436652051565B000C80E6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D6C4366620515665000C80E6 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				D6C4364420515651000C80E6 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		D6C4366720515670000C80E6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D6C4366820515686000C80E6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D6C4366920515693000C80E6 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		D6C4366A205156BD000C80E6 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				D6C4364620515651000C80E6 /* Main.storyboard */,
+				D6C4364E20515651000C80E6 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		D6C4366B205156DA000C80E6 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				D6C4364C20515651000C80E6 /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		D6C4366C205156FF000C80E6 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				D6C4364920515651000C80E6 /* PartsManagementSystem.xcdatamodeld */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

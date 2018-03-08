@@ -14,6 +14,10 @@
 		D6C4364D20515651000C80E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6C4364C20515651000C80E6 /* Assets.xcassets */; };
 		D6C4365020515651000C80E6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6C4364E20515651000C80E6 /* LaunchScreen.storyboard */; };
 		D6C4365B20515651000C80E6 /* PartsManagementSystemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C4365A20515651000C80E6 /* PartsManagementSystemTests.swift */; };
+		D6FD574320515A4B00B2EF39 /* ManageableProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FD574220515A4B00B2EF39 /* ManageableProduct.swift */; };
+		D6FD574520515BBC00B2EF39 /* Vendor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FD574420515BBC00B2EF39 /* Vendor.swift */; };
+		D6FD574720515C5700B2EF39 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FD574620515C5700B2EF39 /* Address.swift */; };
+		D6FD574920515FBB00B2EF39 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FD574820515FBB00B2EF39 /* Country.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +42,10 @@
 		D6C4365620515651000C80E6 /* PartsManagementSystemTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PartsManagementSystemTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6C4365A20515651000C80E6 /* PartsManagementSystemTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartsManagementSystemTests.swift; sourceTree = "<group>"; };
 		D6C4365C20515651000C80E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D6FD574220515A4B00B2EF39 /* ManageableProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageableProduct.swift; sourceTree = "<group>"; };
+		D6FD574420515BBC00B2EF39 /* Vendor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vendor.swift; sourceTree = "<group>"; };
+		D6FD574620515C5700B2EF39 /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
+		D6FD574820515FBB00B2EF39 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +113,10 @@
 		D6C436652051565B000C80E6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D6FD574220515A4B00B2EF39 /* ManageableProduct.swift */,
+				D6FD574420515BBC00B2EF39 /* Vendor.swift */,
+				D6FD574620515C5700B2EF39 /* Address.swift */,
+				D6FD574820515FBB00B2EF39 /* Country.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -266,9 +278,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6FD574920515FBB00B2EF39 /* Country.swift in Sources */,
+				D6FD574720515C5700B2EF39 /* Address.swift in Sources */,
 				D6C4364B20515651000C80E6 /* PartsManagementSystem.xcdatamodeld in Sources */,
 				D6C4364520515651000C80E6 /* ViewController.swift in Sources */,
+				D6FD574520515BBC00B2EF39 /* Vendor.swift in Sources */,
 				D6C4364320515651000C80E6 /* AppDelegate.swift in Sources */,
+				D6FD574320515A4B00B2EF39 /* ManageableProduct.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

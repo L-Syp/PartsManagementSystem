@@ -1,0 +1,197 @@
+{"countries": [
+               {
+               "code": "BW",
+               "emoji": "🇧🇼",
+               "tax": "54.34",
+               "name": "Botswana",
+               "title": "flag for Botswana"
+               },
+               {
+               "code": "BY",
+               "emoji": "🇧🇾",
+               "tax": "88.32",
+               "name": "Belarus",
+               "title": "flag for Belarus"
+               },
+               {
+               "code": "BZ",
+               "emoji": "🇧🇿",
+               "tax": "0.5",
+               "name": "Belize",
+               "title": "flag for Belize"
+               },
+               {
+               "code": "CA",
+               "emoji": "🇨🇦",
+               "tax": "34.53",
+               "name": "Canada",
+               "title": "flag for Canada"
+               },
+               {
+               "code": "CC",
+               "emoji": "🇨🇨",
+               "tax": "9.06",
+               "name": "Cocos (Keeling) Islands",
+               "title": "flag for Cocos (Keeling) Islands"
+               },
+               {
+               "code": "CD",
+               "emoji": "🇨🇩",
+               "tax": "92.4",
+               "name": "Congo",
+               "title": "flag for Congo"
+               },
+               {
+               "code": "CF",
+               "emoji": "🇨🇫",
+               "tax": "23.0",
+               "name": "Central African Republic",
+               "title": "flag for Central African Republic"
+               },
+               {
+               "code": "CG",
+               "emoji": "🇨🇬",
+               "tax": "16.81",
+               "name": "Congo",
+               "title": "flag for Congo"
+               },
+               {
+               "code": "CH",
+               "emoji": "🇨🇭",
+               "tax": "40.0",
+               "name": "Switzerland",
+               "title": "flag for Switzerland"
+               },
+               {
+               "code": "CI",
+               "emoji": "🇨🇮",
+               "tax": "4.11",
+               "name": "Côte D'Ivoire",
+               "title": "flag for Côte D'Ivoire"
+               },
+               {
+               "code": "GU",
+               "emoji": "🇬🇺",
+               "tax": "77.7",
+               "name": "Guam",
+               "title": "flag for Guam"
+               },
+               {
+               "code": "GW",
+               "emoji": "🇬🇼",
+               "tax": "3.0",
+               "name": "Guinea-Bissau",
+               "title": "flag for Guinea-Bissau"
+               },
+               {
+               "code": "GY",
+               "emoji": "🇬🇾",
+               "tax": "68.5",
+               "name": "Guyana",
+               "title": "flag for Guyana"
+               },
+               {
+               "code": "HK",
+               "emoji": "🇭🇰",
+               "tax": "2.0",
+               "name": "Hong Kong",
+               "title": "flag for Hong Kong"
+               },
+               {
+               "code": "HM",
+               "emoji": "🇭🇲",
+               "tax": "75.0",
+               "name": "Heard Island and Mcdonald Islands",
+               "title": "flag for Heard Island and Mcdonald Islands"
+               },
+               {
+               "code": "HN",
+               "emoji": "🇭🇳",
+               "tax": "11.77",
+               "name": "Honduras",
+               "title": "flag for Honduras"
+               },
+               {
+               "code": "HR",
+               "emoji": "🇭🇷",
+               "tax": "12.5",
+               "name": "Croatia",
+               "title": "flag for Croatia"
+               },
+               {
+               "code": "HT",
+               "emoji": "🇭🇹",
+               "tax": "55.04",
+               "name": "Haiti",
+               "title": "flag for Haiti"
+               },
+               {
+               "code": "HU",
+               "emoji": "🇭🇺",
+               "tax": "19.2",
+               "name": "Hungary",
+               "title": "flag for Hungary"
+               },
+               {
+               "code": "ID",
+               "emoji": "🇮🇩",
+               "tax": "25.0",
+               "name": "Indonesia",
+               "title": "flag for Indonesia"
+               },
+               {
+               "code": "IE",
+               "emoji": "🇮🇪",
+               "tax": "65.5",
+               "name": "Ireland",
+               "title": "flag for Ireland"
+               },
+               {
+               "code": "IL",
+               "emoji": "🇮🇱",
+               "tax": "15.5",
+               "name": "Israel",
+               "title": "flag for Israel"
+               },
+               {
+               "code": "IM",
+               "emoji": "🇮🇲",
+               "tax": "25.5",
+               "name": "Isle of Man",
+               "title": "flag for Isle of Man"
+               },
+               {
+               "code": "IN",
+               "emoji": "🇮🇳",
+               "tax": "4.06",
+               "name": "India",
+               "title": "flag for India"
+               },
+               {
+               "code": "IO",
+               "emoji": "🇮🇴",
+               "tax": "70.42",
+               "name": "British Indian Ocean Territory",
+               "title": "flag for British Indian Ocean Territory"
+               },
+               {
+               "code": "IQ",
+               "emoji": "🇮🇶",
+               "tax": "53.12",
+               "name": "Iraq",
+               "title": "flag for Iraq"
+               },
+               {
+               "code": "IR",
+               "emoji": "🇮🇷",
+               "tax": "23.33",
+               "name": "Iran",
+               "title": "flag for Iran"
+               },
+               {
+               "code": "IS",
+               "emoji": "🇮🇸",
+               "tax": "10.05",
+               "name": "Iceland",
+               "title": "flag for Iceland"
+               }}

@@ -1,4 +1,4 @@
-[{"street":"Holy Cross","buildingNo":"00","flatNo":"60238","zipcode":"9052"},
+{"addresses": [{"street":"Holy Cross","buildingNo":"00","flatNo":"60238","zipcode":"9052"},
 {"street":"Transport","buildingNo":"76482","flatNo":"40","zipcode":"10043"},
 {"street":"Armistice","buildingNo":"0288","flatNo":"0","zipcode":"56325"},
 {"street":"Roxbury","buildingNo":"89080","flatNo":"648","zipcode":"9452"},
@@ -7,7 +7,7 @@
 {"street":"Mcguire","buildingNo":"2","flatNo":"833","zipcode":"876545"},
 {"street":"Brown","buildingNo":"98","flatNo":"6857","zipcode":"32472"},
 {"street":"Emmet","buildingNo":"72480","flatNo":"00884","zipcode":"80-230"},
-{"street":"Brentwood","buildingNo":"9087","flatNo":"9186","zipcode":"CW2 7QG},
+{"street":"Brentwood","buildingNo":"9087","flatNo":"9186","zipcode":"CW2 7QG"},
 {"street":"Ridgeview","buildingNo":"26212","flatNo":"68097","zipcode":"5453"},
 {"street":"Straubel","buildingNo":"5","flatNo":"94","zipcode":"5806"},
 {"street":"Dorton","buildingNo":"11","flatNo":"22","zipcode":"7656"},
@@ -27,4 +27,4 @@
 {"street":"Monica","buildingNo":"626","flatNo":"53752","zipcode":"43673"},
 {"street":"Mccormick","buildingNo":"766","flatNo":"025","zipcode":"L2A"},
 {"street":"Mockingbird","buildingNo":"09145","flatNo":"826","zipcode":"395003"},
-{"street":"Norway Maple","buildingNo":"7551","flatNo":"8225","zipcode":"80638"}]
+{"street":"Norway Maple","buildingNo":"7551","flatNo":"8225","zipcode":"80638"}]}

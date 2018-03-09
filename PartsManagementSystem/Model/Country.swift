@@ -6,16 +6,20 @@
 //  Copyright © 2018 Łukasz Sypniewski. All rights reserved.
 //
 
-class Country {
+struct Countries: Codable {
+    let countries: [Country]
+}
+
+struct Country: Codable {
     let name: String
     let code: String
     let flag: String
     let tax: Double
     
-    init(_ name: String, code: String, flag: String, tax: Double) {
-        self.name = name
-        self.code = code
-        self.flag = flag
-        self.tax = tax
+    enum CodingKeys : String, CodingKey {
+        case code
+        case name
+        case flag = "emoji"
+        case tax
     }
 }

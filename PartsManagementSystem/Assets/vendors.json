@@ -1,4 +1,4 @@
-[{"name":"Collier-Wilderman","commission":45.71},
+{"vendors": [{"name":"Collier-Wilderman","commission":45.71},
 {"name":"Greenfelder, Jerde and Kovacek","commission":35.94},
 {"name":"Weimann, Schuppe and Wilkinson","commission":17.13},
 {"name":"Hamill-Jaskolski","commission":46.38},
@@ -27,4 +27,4 @@
 {"name":"Gutmann-Reinger","commission":21.63},
 {"name":"Keebler-Price","commission":34.5},
 {"name":"Mann Inc","commission":16.39},
-{"name":"Green-Schoen","commission":33.72}]
+{"name":"Green-Schoen","commission":33.72}]}

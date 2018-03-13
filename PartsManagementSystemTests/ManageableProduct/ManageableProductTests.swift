@@ -10,22 +10,21 @@ import XCTest
 @testable import PartsManagementSystem
 
 class ManageableProductTests: XCTestCase {
-    
     //MARK: Properties
-    var ManageableProducts: [ManageableProduct] = [ManageableProduct]()
+    var manageableProducts = [ManageableProduct]()
     let arrayLength = 5
     let numberOfItemsToAdd = 3
     
     //MARK: Functions
     func generateData(arrayLength: Int) {
         for i in 0..<arrayLength {
-            let product = ManageableProductMockClass(name: "Product \(i)", price: Double((i+1))*5.5)
-            ManageableProducts.append(product)
+            let product = MockManageableProduct(name: "Product \(i)", netPrice: Double((i+1))*5.5)
+            manageableProducts.append(product)
         }
     }
     
     func addProducts(quantity: Int) -> ManageableProduct {
-        let product = ManageableProducts[arrayLength - 1]
+        var product = manageableProducts[arrayLength - 1]
         for _ in 0..<quantity {
             product.addProduct()
         }
@@ -39,16 +38,18 @@ class ManageableProductTests: XCTestCase {
     }
     
     override func tearDown() {
-        ManageableProducts.removeAll()
+        manageableProducts.removeAll()
         super.tearDown()
     }
     
     func testInitialization() {
-        XCTAssert(ManageableProducts.count == arrayLength)
+        XCTAssert(manageableProducts.count == arrayLength)
         for i in 0..<arrayLength {
-            XCTAssertEqual(ManageableProducts[i].name, "Product \(i)")
-            XCTAssertEqual(ManageableProducts[i].quantity, 0)
-            XCTAssertNotNil(ManageableProducts[i].id)
+            let product = manageableProducts[i]
+            XCTAssertEqual(product.name, "Product \(i)")
+            XCTAssertEqual(product.quantity, 0)
+            XCTAssert(Int(product.id)! >= 0 && Int(product.id)! <= Int32.max)
+            XCTAssertNotNil(manageableProducts[i].id)
         }
     }
     
@@ -59,9 +60,16 @@ class ManageableProductTests: XCTestCase {
     
     func testRemovingProducts() {
         continueAfterFailure = false
-        let product = addProducts(quantity: numberOfItemsToAdd)
+        var product = addProducts(quantity: numberOfItemsToAdd)
         XCTAssertNoThrow(try product.removeProduct(quantity: numberOfItemsToAdd))
         XCTAssertEqual(product.quantity, 0)
     }
     
+    func testRemovingTooManyProducts() {
+        continueAfterFailure = false
+        var product = addProducts(quantity: numberOfItemsToAdd)
+        XCTAssertThrowsError(try product.removeProduct(quantity: numberOfItemsToAdd + 1)) { error in
+            XCTAssertEqual(error as? ProductError, ProductError.removingTooManyItemsError)
+        }
+    }
 }

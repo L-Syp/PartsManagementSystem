@@ -8,13 +8,8 @@
 
 protocol Vendor: AnyObject {
     var name: String { get }
-    var address: Address { get set }
-    var availableProducts: [ManageableProduct] { get set }
+    var address: AddressProtocol { get set }
+    var availableProducts: [ManageableProduct] { get set}
     var commission: Double { get }
-    weak var productManager: ProductManaging? { get set }
-}
-
-enum ProductManagingError : Error {
-    case ProductDoesNotExist(String)
-    case DuplicatedId(String)
+    static var priceCalculator: PriceCalculation { get set }
 }

@@ -12,12 +12,12 @@ class Shoe: ManageableProduct {
     // MARK: Properties
     let name: String
     let id: String
-    var netPrice: Double
+    var netPrice: Decimal
     var quantity: Int
     var size: Int
     
     // MARK: Initializers
-    init(name: String, netPrice: Double, size: Int) {
+    init(name: String, netPrice: Decimal, size: Int) {
         self.name = name
         self.netPrice = netPrice
         self.size = size
@@ -25,7 +25,7 @@ class Shoe: ManageableProduct {
         self.id = Shoe.generateID()
     }
     
-    init(name: String, netPrice: Double, id: String, size: Int) {
+    init(name: String, netPrice: Decimal, id: String, size: Int) {
         self.name = name
         self.netPrice = netPrice
         self.size = size

@@ -31,7 +31,7 @@ class ProductManagingTests: XCTestCase {
         let numberOfItems = 4
         
         for i in 0..<numberOfItems {
-            products.append(MockManageableProduct(name: "Item\(i)", netPrice: Double(i)))
+            products.append(MockManageableProduct(name: "Item\(i)", netPrice: Decimal(i)))
         }
         for i in 0..<products.count {
             XCTAssertNoThrow(try productManager.addProduct(product: products[i]))
@@ -44,7 +44,7 @@ class ProductManagingTests: XCTestCase {
         let id = "ID"
         
         for i in 0..<numberOfItems {
-            products.append(MockManageableProduct(name: "Item\(i)", netPrice: Double(i), id: id))
+            products.append(MockManageableProduct(name: "Item\(i)", netPrice: Decimal(i), id: id))
         }
         for i in 0..<products.count {
             if i == 0 {
@@ -61,7 +61,7 @@ class ProductManagingTests: XCTestCase {
         var IDsArray = [String]()
         
         for i in 0..<numberOfItems {
-            let product = MockManageableProduct(name: "Item\(i)", netPrice: Double(i))
+            let product = MockManageableProduct(name: "Item\(i)", netPrice: Decimal(i))
             XCTAssertNoThrow(try productManager.addProduct(product: product))
             IDsArray.append(product.id)
         }
@@ -78,7 +78,7 @@ class ProductManagingTests: XCTestCase {
     func testRemoveProductByIndex() {
         let numberOfItems = 4
         for i in 0..<numberOfItems {
-            let product = MockManageableProduct(name: "Item\(i)", netPrice: Double(i))
+            let product = MockManageableProduct(name: "Item\(i)", netPrice: Decimal(i))
             XCTAssertNoThrow(try productManager.addProduct(product: product))
         }
         
@@ -97,11 +97,11 @@ class ProductManagingTests: XCTestCase {
         let initialNumberOfItems = numberOfMockItems + numberOfAnotherTypeMockItems
         
         for i in 0..<numberOfMockItems {
-            let product = MockManageableProduct(name: "Item\(i)", netPrice: Double(i))
+            let product = MockManageableProduct(name: "Item\(i)", netPrice: Decimal(i))
             XCTAssertNoThrow(try productManager.addProduct(product: product))
         }
         for i in 0..<numberOfAnotherTypeMockItems {
-            let product = MockManageableAnotherProduct(name: "Item\(i)", netPrice: Double(i))
+            let product = MockManageableAnotherProduct(name: "Item\(i)", netPrice: Decimal(i))
             XCTAssertNoThrow(try productManager.addProduct(product: product))
         }
         XCTAssertEqual(initialNumberOfItems, productManager.vendor.availableProducts.count)
@@ -120,7 +120,7 @@ class ProductManagingTests: XCTestCase {
         let itemName = "Item"
         
         for i in 0..<numberOfItems {
-            let product = MockManageableProduct(name: "\(itemName)\(i)", netPrice: Double(i), id: String(i))
+            let product = MockManageableProduct(name: "\(itemName)\(i)", netPrice: Decimal(i), id: String(i))
             XCTAssertNoThrow(try productManager.addProduct(product: product))
         }
         for i in 0..<numberOfItems + 1 {
@@ -142,7 +142,7 @@ class ProductManagingTests: XCTestCase {
         let itemName = "Item"
         
         for i in 0..<numberOfItems {
-            let product = MockManageableProduct(name: "\(itemName)\(i)", netPrice: Double(i))
+            let product = MockManageableProduct(name: "\(itemName)\(i)", netPrice: Decimal(i))
             XCTAssertNoThrow(try productManager.addProduct(product: product))
         }
         for i in 0..<numberOfItems + 1 {
@@ -156,7 +156,7 @@ class ProductManagingTests: XCTestCase {
                 XCTAssertThrowsError(try productManager.getProduct(at: i))
             }
         }
-        productManager.vendor.availableProducts.append(MockManageableProduct(name: "sda", netPrice: Double(4)))
+        productManager.vendor.availableProducts.append(MockManageableProduct(name: "sda", netPrice: Decimal(4)))
     }
 }
 

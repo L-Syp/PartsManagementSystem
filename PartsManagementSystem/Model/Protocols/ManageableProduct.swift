@@ -11,13 +11,13 @@ import Foundation
 protocol ManageableProduct {
     var name: String { get }
     var id: String { get }
-    var netPrice: Double { get set }
+    var netPrice: Decimal { get set }
     var quantity: Int { get set }
     
     static func generateID() -> String
     mutating func addProduct()
     mutating func removeProduct(quantity: Int) throws
-    mutating func changePrice(to netPrice: Double)
+    mutating func changePrice(to netPrice: Decimal)
 }
 
 enum ProductError : String, Error {
@@ -42,7 +42,7 @@ extension ManageableProduct {
         self.quantity -= quantity
     }
     
-    mutating func changePrice(to netPrice: Double) {
+    mutating func changePrice(to netPrice: Decimal) {
         self.netPrice = netPrice
     }
 }

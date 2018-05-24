@@ -13,18 +13,18 @@ struct MockManageableProduct: ManageableProduct {
     // MARK: Properties
     let name: String
     let id: String
-    var netPrice: Double
+    var netPrice: Decimal
     var quantity: Int
     
     // MARK: Initializers
-    init(name: String, netPrice: Double) {
+    init(name: String, netPrice: Decimal) {
         self.name = name
         self.netPrice = netPrice
         self.quantity = 0
         self.id = MockManageableProduct.generateID()
     }
     
-    init(name: String, netPrice: Double, id: String) {
+    init(name: String, netPrice: Decimal, id: String) {
         self.name = name
         self.netPrice = netPrice
         self.quantity = 0
@@ -37,12 +37,12 @@ struct MockManageableAnotherProduct: ManageableProduct {
     // MARK: Properties
     let name: String
     let id: String
-    var netPrice: Double
+    var netPrice: Decimal
     var quantity: Int
     var someProperty: Int
     
     // MARK: Initializers
-    init(name: String, netPrice: Double) {
+    init(name: String, netPrice: Decimal) {
         self.name = name
         self.netPrice = netPrice
         self.quantity = 0
@@ -50,7 +50,7 @@ struct MockManageableAnotherProduct: ManageableProduct {
         self.someProperty = 0
     }
     
-    init(name: String, netPrice: Double, id: String) {
+    init(name: String, netPrice: Decimal, id: String) {
         self.name = name
         self.netPrice = netPrice
         self.quantity = 0

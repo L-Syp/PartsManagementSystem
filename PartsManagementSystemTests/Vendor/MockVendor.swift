@@ -13,10 +13,10 @@ class MockVendor: Vendor {
     var name: String
     var address: AddressProtocol
     var availableProducts: [ManageableProduct] = [ManageableProduct]()
-    var commission: Double
+    var commission: Decimal
     static var priceCalculator: PriceCalculation { set { Shop.priceCalculator = newValue } get { return Shop.priceCalculator } }
     
-    init(name: String, address: AddressProtocol, commission: Double) {
+    init(name: String, address: AddressProtocol, commission: Decimal) {
         self.name = name
         self.address = address
         self.commission = commission

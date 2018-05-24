@@ -1,4 +1,37 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13772" systemVersion="17D102" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Address" representedClassName="AddressMO" syncable="YES" codeGenerationType="class">
+        <attribute name="buildingNo" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="flatNo" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="streetName" attributeType="String" syncable="YES"/>
+        <attribute name="zipcode" attributeType="String" syncable="YES"/>
+        <relationship name="country" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Country" inverseName="address" inverseEntity="Country" syncable="YES"/>
+        <relationship name="shop" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Shop" inverseName="address" inverseEntity="Shop" syncable="YES"/>
+    </entity>
+    <entity name="Country" representedClassName="CountryMO" syncable="YES" codeGenerationType="class">
+        <attribute name="code" attributeType="String" syncable="YES"/>
+        <attribute name="flag" attributeType="String" syncable="YES"/>
+        <attribute name="name" attributeType="String" syncable="YES"/>
+        <attribute name="tax" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="address" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Address" inverseName="country" inverseEntity="Address" syncable="YES"/>
+    </entity>
+    <entity name="Product" representedClassName="ProductMO" syncable="YES" codeGenerationType="class">
+        <attribute name="id" attributeType="String" syncable="YES"/>
+        <attribute name="name" attributeType="String" syncable="YES"/>
+        <attribute name="netPrice" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="quantity" attributeType="Integer 32" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="shops" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Shop" inverseName="products" inverseEntity="Shop" syncable="YES"/>
+    </entity>
+    <entity name="Shop" representedClassName="ShopMO" syncable="YES" codeGenerationType="class">
+        <attribute name="commission" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="name" attributeType="String" syncable="YES"/>
+        <relationship name="address" maxCount="1" deletionRule="Cascade" destinationEntity="Address" inverseName="shop" inverseEntity="Address" syncable="YES"/>
+        <relationship name="products" toMany="YES" deletionRule="Cascade" destinationEntity="Product" inverseName="shops" inverseEntity="Product" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Address" positionX="-261" positionY="-0" width="128" height="133"/>
+        <element name="Country" positionX="-261" positionY="192" width="128" height="118"/>
+        <element name="Product" positionX="-515" positionY="-174" width="128" height="120"/>
+        <element name="Shop" positionX="-515" positionY="3" width="128" height="103"/>
+    </elements>
 </model>

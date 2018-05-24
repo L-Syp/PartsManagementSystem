@@ -25,10 +25,9 @@ enum PriceFunctions {
 
 class PriceCalculationTest: XCTestCase {
     //MARK: Properties
-    let decimalPlaces = 4
     
     //MARK: Functions
-    func assertPrices(function: PriceFunctions, netPrice: Double, expectedValue: Double, tax: Double? = nil, comission: Double? = nil) {
+    func assertPrices(function: PriceFunctions, netPrice: Decimal, expectedValue: Decimal, tax: Decimal? = nil, comission: Decimal? = nil) {
         let product = MockManageableProduct(name: "-", netPrice: netPrice)
         switch function {
         case .netPrice:
@@ -36,13 +35,13 @@ class PriceCalculationTest: XCTestCase {
             
         case .grossPrice:
             let country = Country(name: "-", code: "-", flag: "-", tax: tax!)
-            XCTAssertEqual(expectedValue.roundToDecimal(decimalPlaces), PriceCalculator.getGrossPrice(of: product, in: country).roundToDecimal(decimalPlaces))
+            XCTAssertEqual(expectedValue, PriceCalculator.getGrossPrice(of: product, in: country))
             
         case .priceForCustomers:
             let country = Country(name: "-", code: "-", flag: "-", tax: tax!)
             let address = Address(streetName: "-", buildingNo: 0, flatNo: nil, zipcode: "-", country: country)
             let vendor = Shop(name: "-", address: address, commission: comission!)
-            XCTAssertEqual(expectedValue.roundToDecimal(decimalPlaces), PriceCalculator.getPriceForCustomers(of: product, from: vendor).roundToDecimal(decimalPlaces))
+            XCTAssertEqual(expectedValue, PriceCalculator.getPriceForCustomers(of: product, from: vendor))
         }
     }
     
@@ -57,11 +56,11 @@ class PriceCalculationTest: XCTestCase {
     
     func testNetPrice() {
         let testData = [
-            (1243.23),
-            (32.23),
-            (7645.32),
-            (234.43),
-            (423.41)
+            (Decimal(1243.23)),
+            (Decimal(32.23)),
+            (Decimal(7645.32)),
+            (Decimal(234.43)),
+            Decimal((423.41))
         ]
         testData.forEach({
             assertPrices(function: .netPrice, netPrice: $0, expectedValue: $0)
@@ -70,11 +69,11 @@ class PriceCalculationTest: XCTestCase {
     
     func testGrossPrice() {
         let testData = [
-            (1243.23, 1522.086489, 22.43),
-            (32.23, 53.927236, 67.32),
-            (7645.32, 7711.069752, 0.86),
-            (234.43, 284.949665, 21.55),
-            (423.41, 503.8579, 19.0)
+            (Decimal(1243.23), Decimal(1522.086489), Decimal(22.43)),
+            (Decimal(32.23), Decimal(53.927236), Decimal(67.32)),
+            (Decimal(7645.32), Decimal(7711.069752), Decimal(0.86)),
+            (Decimal(234.43), Decimal(284.949665), Decimal(21.55)),
+            (Decimal(423.41), Decimal(503.8579), Decimal(19.0))
         ]
         testData.forEach({
             assertPrices(function: .grossPrice, netPrice: $0, expectedValue: $1, tax: $2)
@@ -83,11 +82,11 @@ class PriceCalculationTest: XCTestCase {
     
     func testPriceForCustomers() {
         let testData = [
-            (23212.12, 40024.65852, 22.43, 50),
-            (10, 17.055, 67.32, 3.23),
-            (43.45, 52.743955, 0.86, 20.53),
-            (994.12, 1328.14432, 21.55, 12.05),
-            (20053.9, 30947.17848, 19, 35.32)
+            (Decimal(23212.12), Decimal(40024.65852), Decimal(22.43), Decimal(50)),
+            (Decimal(10), Decimal(17.055), Decimal(67.32), Decimal(3.23)),
+            (Decimal(43.45), Decimal(52.743955), Decimal(0.86), Decimal(20.53)),
+            (Decimal(994.12), Decimal(1328.14432), Decimal(21.55), Decimal(12.05)),
+            (Decimal(20053.9), Decimal(30947.17848), Decimal(19), Decimal(35.32))
         ]
         testData.forEach({
             assertPrices(function: .priceForCustomers, netPrice: $0, expectedValue: $1, tax: $2, comission: $3)

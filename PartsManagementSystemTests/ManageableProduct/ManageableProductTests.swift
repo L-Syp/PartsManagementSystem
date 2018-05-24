@@ -18,7 +18,7 @@ class ManageableProductTests: XCTestCase {
     //MARK: Functions
     func generateData(arrayLength: Int) {
         for i in 0..<arrayLength {
-            let product = MockManageableProduct(name: "Product \(i)", netPrice: Double((i+1))*5.5)
+            let product = MockManageableProduct(name: "Product \(i)", netPrice: Decimal((i+1))*5.5)
             manageableProducts.append(product)
         }
     }
